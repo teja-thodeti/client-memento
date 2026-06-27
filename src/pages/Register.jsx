@@ -6,7 +6,7 @@ import "../styles/Register.css";
 import Button from "../components/button"
 import bgVideo from "../assets/y.mp4"
 function Register() {
-
+//gitpush
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
     const[repassword,setRepassword]=useState("")
