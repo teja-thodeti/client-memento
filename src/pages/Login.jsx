@@ -9,14 +9,12 @@ function Login() {
     const[password,setPassword]=useState("")
     const[error,setError]=useState("");
     function loginclick(){
-        alert(`Email:${email} Password: ${password}`)
         if (!email || !password) {
                 alert("Please fill all fields");
                 setError("enter your email and password")
             }
           else{
             setError("");
-            alert(`Email: ${email} Password: ${password}`);
           }  
         }
     return (
@@ -24,8 +22,8 @@ function Login() {
     <><video autoPlay loop muted playsInline className="background-video">
             <source src={bgVideo} type="video/mp4" />
         </video><div className="container-login">
-                <div className="errorbox">
-                     {error && <p className="error">{error}</p>}
+                <div className="container-error">
+                     {error && <p className="paragraph-error">{error}</p>}
                 </div>
                 <h1 className="header-login"
                 >Login</h1>

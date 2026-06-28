@@ -5,6 +5,17 @@ body {
     justify-content: center;  
     align-items: center;   
 }
+.container-error{
+    height:20px;
+    background-color:black;
+    border-radius:6px;
+}
+.paragraph-error{
+    display:flex;
+    margin:0;
+    justify-content:center;
+    color:red;
+}
 .container-login{
     height:350px;
     width:300px;
@@ -88,3 +99,4 @@ body {
     object-fit: cover;
     z-index: -2;
 }
+

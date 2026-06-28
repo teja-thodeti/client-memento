@@ -10,22 +10,23 @@ function Register() {
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
     const[repassword,setRepassword]=useState("")
+    const[error,setError]=useState("");
 
     useEffect(()=>{
           alert("please DONOT enter your already existing credentails linked to any apps/sites.CREATE NEW")
     },[])
 
     function loginclick(){
-            if (!email || !password || !repassword) {
-            alert("Please fill all fields");
+        if(!email || !password || !repassword){
+            setError("Please fill all fields");
             return;
         }
         if(password != repassword){
-            alert("Password dint Match")
+            setError("Passwords didn't match");
+            return;
         }
-        else{
-            alert(`remember ${email} ${password}`)
-        }
+        setError("");
+        alert("Registration Successful");
     }
       
     return (
@@ -33,6 +34,9 @@ function Register() {
     <><video autoPlay loop muted playsInline className="background-video">
             <source src={bgVideo} type="video/mp4" />
         </video><div className="container-login">
+            <div className="container-error">
+                     {error && <p className="paragraph-error">{error}</p>}
+                </div>
                 <h1 className="header-login">Register</h1>
                 <div className="container-email-row">
                     <Input
