@@ -4,22 +4,29 @@ import Input from "../components/Input";
 import "../styles/Login.css";
 import Button from "../components/button"
 import bgVideo from "../assets/y.mp4"
-/firstpush
 function Login() {
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
-
+    const[error,setError]=useState("");
     function loginclick(){
         alert(`Email:${email} Password: ${password}`)
-    if (!email || !password) {
-            alert("Please fill all fields");
-            return;
-        }}
+        if (!email || !password) {
+                alert("Please fill all fields");
+                setError("enter your email and password")
+            }
+          else{
+            setError("");
+            alert(`Email: ${email} Password: ${password}`);
+          }  
+        }
     return (
         
     <><video autoPlay loop muted playsInline className="background-video">
             <source src={bgVideo} type="video/mp4" />
         </video><div className="container-login">
+                <div className="errorbox">
+                     {error && <p className="error">{error}</p>}
+                </div>
                 <h1 className="header-login"
                 >Login</h1>
                 <div className="container-email-row">
