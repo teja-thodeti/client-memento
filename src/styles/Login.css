@@ -99,4 +99,28 @@ body {
     object-fit: cover;
     z-index: -2;
 }
+.login-page{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container-login{
+    align-items: center;
+}
+
+.container-button{
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph-dha{
+    font-size: 15px;
+    margin-top: 24px;
+    text-align: center;
+    margin-left: 0;
+}

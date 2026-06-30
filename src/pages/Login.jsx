@@ -18,12 +18,13 @@ function Login() {
           }  
         }
     return (
-        
-    <><video autoPlay loop muted playsInline className="background-video">
-            <source src={bgVideo} type="video/mp4" />
-        </video><div className="container-login">
+        <div className="login-page">
+            <video autoPlay loop muted playsInline className="background-video">
+                <source src={bgVideo} type="video/mp4" />
+            </video>
+            <div className="container-login">
                 <div className="container-error">
-                     {error && <p className="paragraph-error">{error}</p>}
+                    {error && <p className="paragraph-error">{error}</p>}
                 </div>
                 <h1 className="header-login"
                 >Login</h1>
@@ -57,9 +58,9 @@ function Login() {
                         onClick={loginclick} />
                 </div>
                 <p className="paragraph-dha">Don't have an account? <Link to="/Register">Register</Link>.</p>
-            </div></>
+            </div>
+        </div>
     );
-    
 }
 
 export default Login; 

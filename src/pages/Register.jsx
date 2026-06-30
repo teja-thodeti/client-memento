@@ -30,12 +30,13 @@ function Register() {
     }
       
     return (
-        
-    <><video autoPlay loop muted playsInline className="background-video">
-            <source src={bgVideo} type="video/mp4" />
-        </video><div className="container-login">
-            <div className="container-error">
-                     {error && <p className="paragraph-error">{error}</p>}
+        <div className="login-page">
+            <video autoPlay loop muted playsInline className="background-video">
+                <source src={bgVideo} type="video/mp4" />
+            </video>
+            <div className="container-login">
+                <div className="container-error">
+                    {error && <p className="paragraph-error">{error}</p>}
                 </div>
                 <h1 className="header-login">Register</h1>
                 <div className="container-email-row">
@@ -78,9 +79,9 @@ function Register() {
                         onClick={loginclick} />
                 </div>
                 <p className="paragraph-dha">Already have an account? <Link to="/Login">Login</Link>.</p>
-            </div></>
+            </div>
+        </div>
     );
-    
 }
 
 export default Register; 
