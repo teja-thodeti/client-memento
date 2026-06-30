@@ -77,7 +77,7 @@ function Register() {
                         //interactive properties
                         onClick={loginclick} />
                 </div>
-                <p className="paragraph-dha">Already have an account? <Link to="/">Login</Link>.</p>
+                <p className="paragraph-dha">Already have an account? <Link to="/Login">Login</Link>.</p>
             </div></>
     );
     
