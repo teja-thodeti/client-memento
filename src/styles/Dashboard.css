@@ -1,0 +1,38 @@
+.d-container-analytics {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+.d-addcard {
+    min-width: 30px;
+    min-height: 180px;
+    padding: 24px;
+    background-color: rgb(204, 204, 204);
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.d-container-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.d-container-addcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
