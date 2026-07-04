@@ -1,18 +1,22 @@
-function SubscriptionCard({ props }) {
+function SubscriptionCard({ props, onRemove }) {
     return (
         <div className="subscription-card">
+            <img
+                src={props.logo}
+                alt={props.appName || "Subscription logo"}
+                className="subscription-logo"
+            />
 
-            <img src={props.logo} alt={props.appName} />
-
-            <h3>{props.appName}</h3>
-
-            <p>Expiry : {props.expiry}</p>
+            <p>Expiry : {props.expiry || "Not set"}</p>
 
             <p>
                 Email Alerts :
                 {props.emailAlert ? " ON" : " OFF"}
             </p>
 
+            <button className="remove-card-btn" onClick={onRemove}>
+                Remove
+            </button>
         </div>
     );
 }
