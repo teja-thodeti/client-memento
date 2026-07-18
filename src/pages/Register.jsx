@@ -35,10 +35,13 @@ function Register() {
                 <source src={bgVideo} type="video/mp4" />
             </video>
             <div className="container-login">
-                <div className="container-error">
+                <span className="pass-eyebrow">New member</span>
+                <h1 className="header-login">Register</h1>
+                <div className="pass-divider"></div>
+
+                <div className={`container-error ${error ? "has-error" : ""}`}>
                     {error && <p className="paragraph-error">{error}</p>}
                 </div>
-                <h1 className="header-login">Register</h1>
                 <div className="container-email-row">
                     <Input
                         className="input-email"
@@ -64,6 +67,7 @@ function Register() {
                 <div className="container-password-row">
                     <Input
                         className="input-repassword"
+                        label="Confirm password:"
                         type="password"
                         placeholder="re-enter your password"
                         //interactive properties

@@ -23,11 +23,14 @@ function Login() {
                 <source src={bgVideo} type="video/mp4" />
             </video>
             <div className="container-login">
-                <div className="container-error">
-                    {error && <p className="paragraph-error">{error}</p>}
-                </div>
+                <span className="pass-eyebrow">Member access</span>
                 <h1 className="header-login"
                 >Login</h1>
+                <div className="pass-divider"></div>
+
+                <div className={`container-error ${error ? "has-error" : ""}`}>
+                    {error && <p className="paragraph-error">{error}</p>}
+                </div>
                 <div className="container-email-row">
                     <Input
                         className="input-email"

@@ -27,7 +27,12 @@ function Dashboard() {
         : "No expiry set";
 
     return (
-        <>
+        <div className="d-page">
+            <div className="d-header">
+                <span className="d-eyebrow">Ledger overview</span>
+                <h1 className="d-title">Your subscriptions</h1>
+            </div>
+
             <div className="d-container-analytics">
                 <div className="analytics-card">
                     <span className="analytics-label">Subscriptions</span>
@@ -66,7 +71,7 @@ function Dashboard() {
             {showpopup && (
                 <Popup onClose={() => setShowpopup(false)} onSave={handleSaveCard} />
             )}
-        </>
+        </div>
     );
 }
 
