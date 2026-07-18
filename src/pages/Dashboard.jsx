@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Addcard from "../components/addcard";
@@ -11,11 +12,7 @@ function Dashboard() {
     const [showpopup, setShowpopup] = useState(false);
     const [carddetails, setCarddetails] = useState([]);
 
-    useEffect(() => {
-        getSubscriptions();
-    }, []);
-
-    async function getSubscriptions() {
+    const getSubscriptions = async () => {
 
         try {
 
@@ -47,7 +44,11 @@ function Dashboard() {
 
         }
 
-    }
+    };
+
+    useEffect(() => {
+        getSubscriptions();
+    }, []);
 
     async function handleSaveCard(card) {
 
